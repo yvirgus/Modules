@@ -1,1 +1,7 @@
 This is the cmake modules used for the c++ libraries, it contains the modules for different platform.
+We need to set some environment variables, for example:
+
+export FFTW='/opt/fftw'
+export GMP='/opt/gmp'
+export SPRNG='/home/boruoshihao/sprng/sprng2.0'
+export MKL='/opt/intel/mkl'

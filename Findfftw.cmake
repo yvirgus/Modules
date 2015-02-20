@@ -1,7 +1,7 @@
 #Try to find fftw
-set(fftw_path "/opt/fftw")
-find_library(fftw_libraries NAMES libfftw3.a PATHS "${fftw_path}/lib" NO_DEFAULT_PATH)
-find_path(fftw_include_dirs fftw3.h PATHS "${fftw_path}/include" NO_DEFAULT_PATH)
+set(fftw_path "$ENV{FFTW}")
+find_library(fftw_libraries NAMES libfftw3.a PATHS "${fftw_path}/lib")
+find_path(fftw_include_dirs fftw3.h PATHS "${fftw_path}/include")
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(fftw  DEFAULT_MSG

@@ -1,7 +1,7 @@
 #Try to find gmp
-set(gmp_path "/opt/gmp")
-find_library(gmp_libraries NAMES libgmp.a PATHS "${gmp_path}/lib" NO_DEFAULT_PATH)
-find_path(gmp_include_dirs gmp.h PATHS "${gmp_path}/include" NO_DEFAULT_PATH)
+set(gmp_path "$ENV{GMP}")
+find_library(gmp_libraries NAMES libgmp.a PATHS "${gmp_path}/lib")
+find_path(gmp_include_dirs gmp.h PATHS "${gmp_path}/include")
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(gmp  DEFAULT_MSG

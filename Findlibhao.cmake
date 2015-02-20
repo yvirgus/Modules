@@ -1,5 +1,5 @@
 #Try to find libhao
-set(libhao_path "~/lib_hao/serial")
+set(libhao_path "$ENV{LIBHAO}")
 find_library(fftwhao_libraries     NAMES  libfftwhao.a      PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_library(kahanerrhao_libraries NAMES  libkahanerrhao.a  PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_library(latticehao_libraries  NAMES  liblatticehao.a   PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
