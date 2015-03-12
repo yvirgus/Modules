@@ -7,3 +7,7 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(acml  DEFAULT_MSG
                                   acml_libraries acml_include_dirs)
 mark_as_advanced(acml_include_dirs acml_libraries)
+
+if(NOT ACML_FOUND)
+  MESSAGE ("-- In order to find acml, please define ACML='/path/to/acml' ")
+endif()

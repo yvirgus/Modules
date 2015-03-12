@@ -5,3 +5,5 @@ export FFTW='/opt/fftw'
 export GMP='/opt/gmp'
 export SPRNG='/home/boruoshihao/sprng/sprng2.0'
 export MKL='/opt/intel/mkl'
+
+Check your environment variables, some might already been defined, e.g. echo ${FFTW}

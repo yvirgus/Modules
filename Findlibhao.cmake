@@ -16,3 +16,7 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(libhao  DEFAULT_MSG
                                   libhao_libraries libhao_include_dirs)
 mark_as_advanced(libhao_include_dirs libhao_libraries)
+
+if(NOT LIBHAO_FOUND)
+  MESSAGE ("-- In order to find libhao, please define LIBHAO='/path/to/libhao' ")
+endif()

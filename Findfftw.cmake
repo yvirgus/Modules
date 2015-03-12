@@ -7,3 +7,7 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(fftw  DEFAULT_MSG
                                   fftw_libraries fftw_include_dirs)
 mark_as_advanced(fftw_include_dirs fftw_libraries)
+
+if(NOT FFTW_FOUND)
+  MESSAGE ("-- In order to find fftw, please define FFTW='/path/to/fftw' ")
+endif()

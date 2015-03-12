@@ -7,3 +7,7 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(gmp  DEFAULT_MSG
                                   gmp_libraries gmp_include_dirs)
 mark_as_advanced(gmp_include_dirs gmp_libraries)
+
+if(NOT GMP_FOUND)
+  MESSAGE ("-- In order to find gmp, please define GMP='/path/to/gmp' ")
+endif()

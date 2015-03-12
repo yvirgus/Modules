@@ -11,3 +11,7 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(mkl  DEFAULT_MSG
                                   mkl_libraries mkl_include_dirs)
 mark_as_advanced(mkl_include_dirs mkl_libraries)
+
+if(NOT MKL_FOUND)
+  MESSAGE ("-- In order to find mkl, please define MKL='/path/to/mkl' ")
+endif()
