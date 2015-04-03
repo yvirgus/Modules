@@ -1,6 +1,6 @@
 #Try to find mkl
 set(mkl_path "$ENV{MKL}")
-find_library(lp64_libraries NAMES mkl_intel_ilp64 PATHS "${mkl_path}/lib/intel64")
+find_library(lp64_libraries NAMES mkl_intel_lp64 PATHS "${mkl_path}/lib/intel64")
 find_library(core_libraries NAMES mkl_core PATHS "${mkl_path}/lib/intel64")
 find_library(gnu_thread_libraries NAMES mkl_gnu_thread PATHS "${mkl_path}/lib/intel64")
 set(mkl_libraries ${lp64_libraries} ${core_libraries} ${gnu_thread_libraries})
