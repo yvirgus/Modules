@@ -1,6 +1,8 @@
 #Try to find acml
+
+# MESSAGE("? ACML = $ENV{ACML}")
 set(acml_path "$ENV{ACML}")
-find_library(acml_libraries NAMES libacml.a PATHS "${acml_path}/lib")
+find_library(acml_libraries NAMES libacml.a libacml_mp.a PATHS "${acml_path}/lib64" "${acml_path}/lib")
 find_path(acml_include_dirs acml.h PATHS "${acml_path}/include")
 
 include(FindPackageHandleStandardArgs)
